@@ -1,0 +1,11 @@
+F:\Code\Software Engineering\Rock Wall\bin\Release\SDSU Rock Wall CRM.exe.config
+F:\Code\Software Engineering\Rock Wall\bin\Release\SDSU Rock Wall CRM.exe
+F:\Code\Software Engineering\Rock Wall\bin\Release\SDSU Rock Wall CRM.pdb
+F:\Code\Software Engineering\Rock Wall\obj\Release\SDSU Rock Wall CRM.csprojResolveAssemblyReference.cache
+F:\Code\Software Engineering\Rock Wall\obj\Release\SDSU_Rock_Wall_CRM.BasicLayout.resources
+F:\Code\Software Engineering\Rock Wall\obj\Release\SDSU_Rock_Wall_CRM.Dashboard.resources
+F:\Code\Software Engineering\Rock Wall\obj\Release\SDSU_Rock_Wall_CRM.loginForm.resources
+F:\Code\Software Engineering\Rock Wall\obj\Release\SDSU_Rock_Wall_CRM.Properties.Resources.resources
+F:\Code\Software Engineering\Rock Wall\obj\Release\SDSU Rock Wall CRM.csproj.GenerateResource.Cache
+F:\Code\Software Engineering\Rock Wall\obj\Release\SDSU Rock Wall CRM.exe
+F:\Code\Software Engineering\Rock Wall\obj\Release\SDSU Rock Wall CRM.pdb
