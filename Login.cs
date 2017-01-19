@@ -17,22 +17,27 @@ namespace SDSU_Rock_Wall_CRM
         {
             InitializeComponent();
         }
-
-        private void usernameField_TextChanged(object sender, EventArgs e)
+        private string hashPassword(string password)
         {
-
+            var bytes = new UTF8Encoding().GetBytes(password);
+            byte[] hashbytes;
+            using (var algorithm = new System.Security.Cryptography.SHA512Managed())
+            {
+                hashbytes = algorithm.ComputeHash(bytes);
+            }
+            return Convert.ToBase64String(hashbytes);
         }
 
-        private void loginButton_Click(object sender, EventArgs e)
+        private void loginButton_Click_1(object sender, EventArgs e)
         {
-            if(this.usernameField.Text != "" && this.passwordField.Text != "")
+            if (this.usernameField.Text != "" && this.passwordField.Text != "")
             {
                 var hashedPassword = hashPassword(this.passwordField.Text);
                 string connectionString = "Data Source = sqlpiedpiper.database.windows.net; Initial Catalog=RockWallSDSU; Persist Security Info = True; User ID = devadmin; Password = P@ssword";
                 try
                 {
                     SqlConnection con = new SqlConnection(connectionString);
-                    SqlCommand command = new SqlCommand("Select * from Admins where username=@username and password=@password",con);
+                    SqlCommand command = new SqlCommand("Select * from Admins where username=@username and password=@password", con);
                     command.Parameters.AddWithValue("@username", this.usernameField.Text);
                     command.Parameters.AddWithValue("@password", hashedPassword);
                     con.Open();
@@ -40,12 +45,12 @@ namespace SDSU_Rock_Wall_CRM
                     DataSet returnedData = new DataSet();
                     adapt.Fill(returnedData);
                     con.Close();
-                    if(returnedData.Tables[0].Rows.Count == 1)
+                    if (returnedData.Tables[0].Rows.Count == 1)
                     {
                         var dashboardForm = new Dashboard();
                         dashboardForm.Location = this.Location;
                         dashboardForm.StartPosition = this.StartPosition;
-                        dashboardForm.WindowState = FormWindowState.Maximized;
+                        dashboardForm.WindowState = FormWindowState.Normal;
                         dashboardForm.Show();
                         this.Close();
                     }
@@ -64,7 +69,7 @@ namespace SDSU_Rock_Wall_CRM
                             var dashboardForm = new Dashboard();
                             dashboardForm.Location = this.Location;
                             dashboardForm.StartPosition = this.StartPosition;
-                            dashboardForm.WindowState = FormWindowState.Maximized;
+                            dashboardForm.WindowState = FormWindowState.Normal;
                             dashboardForm.Show();
                             this.Close();
                         }
@@ -76,22 +81,12 @@ namespace SDSU_Rock_Wall_CRM
                         }
                     }
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
                 }
 
             }
-        }
-        private string hashPassword(string password)
-        {
-            var bytes = new UTF8Encoding().GetBytes(password);
-            byte[] hashbytes;
-            using (var algorithm = new System.Security.Cryptography.SHA512Managed())
-            {
-                hashbytes = algorithm.ComputeHash(bytes);
-            }
-            return Convert.ToBase64String(hashbytes);
         }
     }
 }

@@ -21,7 +21,7 @@ namespace SDSU_Rock_Wall_CRM
             var dashBoard = new Dashboard();
             dashBoard.Location = this.Location;
             dashBoard.StartPosition = this.StartPosition;
-            dashBoard.WindowState = FormWindowState.Maximized;
+            dashBoard.WindowState = FormWindowState.Normal;
             dashBoard.Show();
             this.Hide();
         }
@@ -31,7 +31,8 @@ namespace SDSU_Rock_Wall_CRM
             var dashBoard = new BasicLayout();
             dashBoard.Location = this.Location;
             dashBoard.StartPosition = this.StartPosition;
-            dashBoard.WindowState = FormWindowState.Maximized;
+            dashBoard.WindowState = FormWindowState.Normal;
+            dashBoard.titleOfDataLabel.Text = "Add User";
             dashBoard.Show();
             this.Hide();
         }
@@ -41,7 +42,8 @@ namespace SDSU_Rock_Wall_CRM
             var dashBoard = new BasicLayout();
             dashBoard.Location = this.Location;
             dashBoard.StartPosition = this.StartPosition;
-            dashBoard.WindowState = FormWindowState.Maximized;
+            dashBoard.WindowState = FormWindowState.Normal;
+            dashBoard.titleOfDataLabel.Text = "Edit User";
             dashBoard.Show();
             this.Hide();
         }
@@ -51,7 +53,8 @@ namespace SDSU_Rock_Wall_CRM
             var dashBoard = new BasicLayout();
             dashBoard.Location = this.Location;
             dashBoard.StartPosition = this.StartPosition;
-            dashBoard.WindowState = FormWindowState.Maximized;
+            dashBoard.WindowState = FormWindowState.Normal;
+            dashBoard.titleOfDataLabel.Text = "Delete User";
             dashBoard.Show();
             this.Hide();
         }
@@ -61,27 +64,18 @@ namespace SDSU_Rock_Wall_CRM
             var dashBoard = new BasicLayout();
             dashBoard.Location = this.Location;
             dashBoard.StartPosition = this.StartPosition;
-            dashBoard.WindowState = FormWindowState.Maximized;
+            dashBoard.WindowState = FormWindowState.Normal;
+            dashBoard.titleOfDataLabel.Text = "Pending Suspensions";
             dashBoard.Show();
             this.Hide();
         }
-
-        private void issueSuspensionToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            var dashBoard = new BasicLayout();
-            dashBoard.Location = this.Location;
-            dashBoard.StartPosition = this.StartPosition;
-            dashBoard.WindowState = FormWindowState.Maximized;
-            dashBoard.Show();
-            this.Hide();
-        }
-
         private void suspendUserToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var dashBoard = new BasicLayout();
             dashBoard.Location = this.Location;
             dashBoard.StartPosition = this.StartPosition;
-            dashBoard.WindowState = FormWindowState.Maximized;
+            dashBoard.WindowState = FormWindowState.Normal;
+            dashBoard.titleOfDataLabel.Text = "Suspend User";
             dashBoard.Show();
             this.Hide();
         }
@@ -91,7 +85,8 @@ namespace SDSU_Rock_Wall_CRM
             var dashBoard = new BasicLayout();
             dashBoard.Location = this.Location;
             dashBoard.StartPosition = this.StartPosition;
-            dashBoard.WindowState = FormWindowState.Maximized;
+            dashBoard.WindowState = FormWindowState.Normal;
+            dashBoard.titleOfDataLabel.Text = "Add Inventory Item";
             dashBoard.Show();
             this.Hide();
         }
@@ -101,7 +96,8 @@ namespace SDSU_Rock_Wall_CRM
             var dashBoard = new BasicLayout();
             dashBoard.Location = this.Location;
             dashBoard.StartPosition = this.StartPosition;
-            dashBoard.WindowState = FormWindowState.Maximized;
+            dashBoard.WindowState = FormWindowState.Normal;
+            dashBoard.titleOfDataLabel.Text = "Edit Inventory Item";
             dashBoard.Show();
             this.Hide();
         }
@@ -111,7 +107,8 @@ namespace SDSU_Rock_Wall_CRM
             var dashBoard = new BasicLayout();
             dashBoard.Location = this.Location;
             dashBoard.StartPosition = this.StartPosition;
-            dashBoard.WindowState = FormWindowState.Maximized;
+            dashBoard.WindowState = FormWindowState.Normal;
+            dashBoard.titleOfDataLabel.Text = "Remove Inventory Item";
             dashBoard.Show();
             this.Hide();
         }
@@ -121,7 +118,8 @@ namespace SDSU_Rock_Wall_CRM
             var dashBoard = new BasicLayout();
             dashBoard.Location = this.Location;
             dashBoard.StartPosition = this.StartPosition;
-            dashBoard.WindowState = FormWindowState.Maximized;
+            dashBoard.WindowState = FormWindowState.Normal;
+            dashBoard.titleOfDataLabel.Text = "Reports";
             dashBoard.Show();
             this.Hide();
         }

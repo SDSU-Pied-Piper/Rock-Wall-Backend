@@ -50,14 +50,14 @@
             this.loginLayoutPanel.Controls.Add(this.passwordLabel, 0, 1);
             this.loginLayoutPanel.Controls.Add(this.passwordField, 1, 1);
             this.loginLayoutPanel.Controls.Add(this.loginButton, 1, 2);
-            this.loginLayoutPanel.Location = new System.Drawing.Point(730, 262);
+            this.loginLayoutPanel.Location = new System.Drawing.Point(442, 254);
             this.loginLayoutPanel.Name = "loginLayoutPanel";
             this.loginLayoutPanel.RowCount = 3;
             this.loginLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.loginLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.loginLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.loginLayoutPanel.Size = new System.Drawing.Size(380, 172);
-            this.loginLayoutPanel.TabIndex = 0;
+            this.loginLayoutPanel.TabIndex = 1;
             // 
             // usernameLabel
             // 
@@ -82,7 +82,6 @@
             this.usernameField.Name = "usernameField";
             this.usernameField.Size = new System.Drawing.Size(175, 32);
             this.usernameField.TabIndex = 1;
-            this.usernameField.TextChanged += new System.EventHandler(this.usernameField_TextChanged);
             // 
             // passwordLabel
             // 
@@ -118,18 +117,17 @@
             this.loginButton.TabIndex = 4;
             this.loginButton.Text = "Login";
             this.loginButton.UseVisualStyleBackColor = true;
-            this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
+            this.loginButton.Click += new System.EventHandler(this.loginButton_Click_1);
             // 
             // loginForm
             // 
             this.AcceptButton = this.loginButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.loginLayoutPanel);
             this.Name = "loginForm";
             this.Text = "SDSU Rock Wall";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.loginLayoutPanel.ResumeLayout(false);
             this.loginLayoutPanel.PerformLayout();
             this.ResumeLayout(false);
@@ -139,9 +137,9 @@
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel loginLayoutPanel;
-        private System.Windows.Forms.Label passwordLabel;
         private System.Windows.Forms.Label usernameLabel;
         private System.Windows.Forms.TextBox usernameField;
+        private System.Windows.Forms.Label passwordLabel;
         private System.Windows.Forms.TextBox passwordField;
         private System.Windows.Forms.Button loginButton;
     }
