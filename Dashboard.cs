@@ -67,7 +67,13 @@ namespace SDSU_Rock_Wall_CRM
         {
 
         }
-
+        private void Dashboard_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.F7 && e.Control && e.Alt)
+            {
+                //TODO: Put in a new form so that Devs can add first accounts for delivery.
+            }
+        }
         private void addUserToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             var dashboardForm = new BasicLayout();
@@ -140,6 +146,7 @@ namespace SDSU_Rock_Wall_CRM
             dashboardForm.WindowState = FormWindowState.Normal;
             dashboardForm.titleOfDataLabel.Text = "Add Inventory Item";
             dashboardForm.Show();
+            var inventory = new Inventory();
             this.Hide();
         }
 
@@ -162,6 +169,7 @@ namespace SDSU_Rock_Wall_CRM
             dashboardForm.WindowState = FormWindowState.Normal;
             dashboardForm.titleOfDataLabel.Text = "Remove Inventory Item";
             dashboardForm.Show();
+            var inventory = new Inventory();
             this.Hide();
         }
 

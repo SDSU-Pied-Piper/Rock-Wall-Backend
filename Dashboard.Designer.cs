@@ -183,21 +183,21 @@
             // deleteUserToolStripMenuItem
             // 
             this.deleteUserToolStripMenuItem.Name = "deleteUserToolStripMenuItem";
-            this.deleteUserToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.deleteUserToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.deleteUserToolStripMenuItem.Text = "Delete User";
             this.deleteUserToolStripMenuItem.Click += new System.EventHandler(this.deleteUserToolStripMenuItem_Click_1);
             // 
             // editUserToolStripMenuItem
             // 
             this.editUserToolStripMenuItem.Name = "editUserToolStripMenuItem";
-            this.editUserToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.editUserToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.editUserToolStripMenuItem.Text = "Edit User";
             this.editUserToolStripMenuItem.Click += new System.EventHandler(this.editUserToolStripMenuItem_Click_1);
             // 
             // addUserToolStripMenuItem
             // 
             this.addUserToolStripMenuItem.Name = "addUserToolStripMenuItem";
-            this.addUserToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.addUserToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.addUserToolStripMenuItem.Text = "Add User";
             this.addUserToolStripMenuItem.Click += new System.EventHandler(this.addUserToolStripMenuItem_Click_1);
             // 
@@ -297,9 +297,10 @@
             this.Controls.Add(this.dataGridView3);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.dashboardMenuStrip);
+            this.KeyPreview = true;
             this.Name = "Dashboard";
             this.Text = "Dashboard";
-            this.Load += new System.EventHandler(this.Dashboard_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Dashboard_KeyDown);
             this.flowLayoutPanel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);

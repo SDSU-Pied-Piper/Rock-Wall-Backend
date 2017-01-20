@@ -16,6 +16,7 @@ namespace SDSU_Rock_Wall_CRM
         public loginForm()
         {
             InitializeComponent();
+            this.KeyPreview = true;           
         }
         private string hashPassword(string password)
         {
@@ -31,20 +32,16 @@ namespace SDSU_Rock_Wall_CRM
         private void loginButton_Click_1(object sender, EventArgs e)
         {
             if (this.usernameField.Text != "" && this.passwordField.Text != "")
-            {
+            {   
                 var hashedPassword = hashPassword(this.passwordField.Text);
-                string connectionString = "Data Source = sqlpiedpiper.database.windows.net; Initial Catalog=RockWallSDSU; Persist Security Info = True; User ID = devadmin; Password = P@ssword";
                 try
                 {
-                    SqlConnection con = new SqlConnection(connectionString);
-                    SqlCommand command = new SqlCommand("Select * from Admins where username=@username and password=@password", con);
+                    Database db = new Database();
+                    SqlCommand command = new SqlCommand("Select * from Admins where username=@username and password=@password", db.con);
                     command.Parameters.AddWithValue("@username", this.usernameField.Text);
                     command.Parameters.AddWithValue("@password", hashedPassword);
-                    con.Open();
-                    SqlDataAdapter adapt = new SqlDataAdapter(command);
                     DataSet returnedData = new DataSet();
-                    adapt.Fill(returnedData);
-                    con.Close();
+                    returnedData = db.sendSelectCommand(command);
                     if (returnedData.Tables[0].Rows.Count == 1)
                     {
                         var dashboardForm = new Dashboard();
@@ -56,14 +53,11 @@ namespace SDSU_Rock_Wall_CRM
                     }
                     else
                     {
-                        command = new SqlCommand("Select * from Masters where username=@username and password=@password", con);
+                        command = new SqlCommand("Select * from Masters where username=@username and password=@password", db.con);
                         command.Parameters.AddWithValue("@username", this.usernameField.Text);
                         command.Parameters.AddWithValue("@password", hashedPassword);
-                        con.Open();
-                        adapt = new SqlDataAdapter(command);
-                        returnedData = new DataSet();
-                        adapt.Fill(returnedData);
-                        con.Close();
+                        returnedData.Reset();
+                        returnedData = db.sendSelectCommand(command);
                         if (returnedData.Tables[0].Rows.Count == 1)
                         {
                             var dashboardForm = new Dashboard();
