@@ -38,18 +38,13 @@
             this.viewPendingSuspensionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.suspendUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manageInventoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addItemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editItemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.removeItemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.todayTotalPatronInsightButton = new System.Windows.Forms.Button();
             this.todayNewPatronInsightButton = new System.Windows.Forms.Button();
             this.titleOfDataLabel = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dashboardMenuStrip.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // dashboardMenuStrip
@@ -129,34 +124,10 @@
             // 
             // manageInventoryToolStripMenuItem
             // 
-            this.manageInventoryToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addItemToolStripMenuItem,
-            this.editItemToolStripMenuItem,
-            this.removeItemToolStripMenuItem});
             this.manageInventoryToolStripMenuItem.Name = "manageInventoryToolStripMenuItem";
             this.manageInventoryToolStripMenuItem.Size = new System.Drawing.Size(115, 20);
             this.manageInventoryToolStripMenuItem.Text = "Manage Inventory";
-            // 
-            // addItemToolStripMenuItem
-            // 
-            this.addItemToolStripMenuItem.Name = "addItemToolStripMenuItem";
-            this.addItemToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
-            this.addItemToolStripMenuItem.Text = "Add Item";
-            this.addItemToolStripMenuItem.Click += new System.EventHandler(this.addItemToolStripMenuItem_Click);
-            // 
-            // editItemToolStripMenuItem
-            // 
-            this.editItemToolStripMenuItem.Name = "editItemToolStripMenuItem";
-            this.editItemToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
-            this.editItemToolStripMenuItem.Text = "Edit Item";
-            this.editItemToolStripMenuItem.Click += new System.EventHandler(this.editItemToolStripMenuItem_Click);
-            // 
-            // removeItemToolStripMenuItem
-            // 
-            this.removeItemToolStripMenuItem.Name = "removeItemToolStripMenuItem";
-            this.removeItemToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
-            this.removeItemToolStripMenuItem.Text = "Remove Item";
-            this.removeItemToolStripMenuItem.Click += new System.EventHandler(this.removeItemToolStripMenuItem_Click);
+            this.manageInventoryToolStripMenuItem.Click += new System.EventHandler(this.manageInventoryToolStripMenuItem_Click);
             // 
             // reportsToolStripMenuItem
             // 
@@ -181,7 +152,7 @@
             this.todayTotalPatronInsightButton.Name = "todayTotalPatronInsightButton";
             this.todayTotalPatronInsightButton.Size = new System.Drawing.Size(145, 27);
             this.todayTotalPatronInsightButton.TabIndex = 0;
-            this.todayTotalPatronInsightButton.Text = "Today\'s Patrons: 100";
+            this.todayTotalPatronInsightButton.Text = "Today\'s Patrons: 0";
             this.todayTotalPatronInsightButton.UseVisualStyleBackColor = true;
             // 
             // todayNewPatronInsightButton
@@ -191,7 +162,7 @@
             this.todayNewPatronInsightButton.Name = "todayNewPatronInsightButton";
             this.todayNewPatronInsightButton.Size = new System.Drawing.Size(145, 27);
             this.todayNewPatronInsightButton.TabIndex = 1;
-            this.todayNewPatronInsightButton.Text = "Today\'s New Patrons: 100";
+            this.todayNewPatronInsightButton.Text = "Today\'s New Patrons: 0";
             this.todayNewPatronInsightButton.UseVisualStyleBackColor = true;
             // 
             // titleOfDataLabel
@@ -204,20 +175,11 @@
             this.titleOfDataLabel.TabIndex = 14;
             this.titleOfDataLabel.Text = "Title of Data";
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(24, 165);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1215, 504);
-            this.dataGridView1.TabIndex = 15;
-            // 
             // BasicLayout
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 681);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.titleOfDataLabel);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.dashboardMenuStrip);
@@ -226,7 +188,6 @@
             this.dashboardMenuStrip.ResumeLayout(false);
             this.dashboardMenuStrip.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -244,14 +205,10 @@
         private System.Windows.Forms.ToolStripMenuItem viewPendingSuspensionsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem suspendUserToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem manageInventoryToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem addItemToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem editItemToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem removeItemToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reportsToolStripMenuItem;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         public System.Windows.Forms.Label titleOfDataLabel;
         public System.Windows.Forms.Button todayTotalPatronInsightButton;
         public System.Windows.Forms.Button todayNewPatronInsightButton;
-        public System.Windows.Forms.DataGridView dataGridView1;
     }
 }

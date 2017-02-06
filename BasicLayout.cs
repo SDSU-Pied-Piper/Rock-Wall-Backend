@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
@@ -20,16 +15,13 @@ namespace SDSU_Rock_Wall_CRM
             var todayTotalNewUserInsightPrefix = "Today's New Patrons: ";
             var dateOfToday = DateTime.Today.ToShortDateString();
             StringBuilder todayTotalUserInsightText = new StringBuilder();
-            string connectionString = "Data Source = sqlpiedpiper.database.windows.net; Initial Catalog=RockWallSDSU; Persist Security Info = True; User ID = devadmin; Password = P@ssword";
             try
             {
-                SqlConnection con = new SqlConnection(connectionString);
-                SqlCommand command = new SqlCommand("Select * from Patrons where lastCheckIn=@dateOfToday", con);
+                Database db = new Database();
+                SqlCommand command = new SqlCommand("Select * from Patrons where lastCheckIn=@dateOfToday", db.con);
                 command.Parameters.AddWithValue("@dateOfToday", dateOfToday);
-                con.Open();
-                SqlDataAdapter adapt = new SqlDataAdapter(command);
                 DataSet returnedData = new DataSet();
-                adapt.Fill(returnedData);
+                returnedData = db.sendSelectCommand(command);
                 if (returnedData.Tables[0].Rows.Count <= 0)
                 {
                     todayTotalUserInsightText.Append($"{todayTotalUserInsightPrefix} 0");
@@ -44,9 +36,8 @@ namespace SDSU_Rock_Wall_CRM
                 command.Parameters.Clear();
                 command.CommandText = "Select * from Patrons where dateOfCreation=@dateOfToday";
                 command.Parameters.AddWithValue("@dateOfToday", dateOfToday);
-                adapt.SelectCommand = command;
                 returnedData.Reset();
-                adapt.Fill(returnedData);
+                returnedData = db.sendSelectCommand(command);
                 if (returnedData.Tables[0].Rows.Count <= 0)
                 {
                     todayTotalUserInsightText.Append($"{todayTotalNewUserInsightPrefix} 0");
@@ -56,7 +47,6 @@ namespace SDSU_Rock_Wall_CRM
                     todayTotalUserInsightText.Append($"{todayTotalNewUserInsightPrefix} {returnedData.Tables[0].Rows.Count}");
                 }
                 this.todayNewPatronInsightButton.Text = todayTotalUserInsightText.ToString();
-                con.Close();
             }
             catch (Exception ex)
             {
@@ -127,39 +117,6 @@ namespace SDSU_Rock_Wall_CRM
             this.Hide();
         }
 
-        private void addItemToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            var dashBoard = new BasicLayout();
-            dashBoard.Location = this.Location;
-            dashBoard.StartPosition = this.StartPosition;
-            dashBoard.WindowState = FormWindowState.Normal;
-            dashBoard.titleOfDataLabel.Text = "Add Inventory Item";
-            dashBoard.Show();
-            this.Hide();
-        }
-
-        private void editItemToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            var dashBoard = new BasicLayout();
-            dashBoard.Location = this.Location;
-            dashBoard.StartPosition = this.StartPosition;
-            dashBoard.WindowState = FormWindowState.Normal;
-            dashBoard.titleOfDataLabel.Text = "Edit Inventory Item";
-            dashBoard.Show();
-            this.Hide();
-        }
-
-        private void removeItemToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            var dashBoard = new BasicLayout();
-            dashBoard.Location = this.Location;
-            dashBoard.StartPosition = this.StartPosition;
-            dashBoard.WindowState = FormWindowState.Normal;
-            dashBoard.titleOfDataLabel.Text = "Remove Inventory Item";
-            dashBoard.Show();
-            this.Hide();
-        }
-
         private void reportsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var dashBoard = new BasicLayout();
@@ -168,6 +125,18 @@ namespace SDSU_Rock_Wall_CRM
             dashBoard.WindowState = FormWindowState.Normal;
             dashBoard.titleOfDataLabel.Text = "Reports";
             dashBoard.Show();
+            this.Hide();
+        }
+
+        private void manageInventoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var dashboardForm = new InventoryUI();
+            dashboardForm.Location = this.Location;
+            dashboardForm.StartPosition = this.StartPosition;
+            dashboardForm.WindowState = FormWindowState.Normal;
+            dashboardForm.titleOfDataLabel.Text = "Manage Inventory";
+            dashboardForm.Show();
+            var inventory = new Inventory();
             this.Hide();
         }
     }

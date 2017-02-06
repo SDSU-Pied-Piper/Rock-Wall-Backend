@@ -35,10 +35,6 @@
             this.todayNewPatronInsightButton = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.removeItemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editItemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addItemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.manageInventoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.suspendUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewPendingSuspensionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.suspensionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -54,6 +50,7 @@
             this.flowLayoutPanel6 = new System.Windows.Forms.FlowLayoutPanel();
             this.button7 = new System.Windows.Forms.Button();
             this.dataGridView5 = new System.Windows.Forms.DataGridView();
+            this.manageInventoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.flowLayoutPanel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
@@ -84,9 +81,12 @@
             // 
             // dataGridView3
             // 
+            this.dataGridView3.AllowUserToAddRows = false;
+            this.dataGridView3.AllowUserToDeleteRows = false;
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView3.Location = new System.Drawing.Point(900, 212);
             this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.ReadOnly = true;
             this.dataGridView3.Size = new System.Drawing.Size(337, 457);
             this.dataGridView3.TabIndex = 17;
             // 
@@ -125,37 +125,6 @@
             this.reportsToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
             this.reportsToolStripMenuItem.Text = "Reports";
             this.reportsToolStripMenuItem.Click += new System.EventHandler(this.reportsToolStripMenuItem_Click_1);
-            // 
-            // removeItemToolStripMenuItem
-            // 
-            this.removeItemToolStripMenuItem.Name = "removeItemToolStripMenuItem";
-            this.removeItemToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
-            this.removeItemToolStripMenuItem.Text = "Remove Item";
-            this.removeItemToolStripMenuItem.Click += new System.EventHandler(this.removeItemToolStripMenuItem_Click_1);
-            // 
-            // editItemToolStripMenuItem
-            // 
-            this.editItemToolStripMenuItem.Name = "editItemToolStripMenuItem";
-            this.editItemToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
-            this.editItemToolStripMenuItem.Text = "Edit Item";
-            this.editItemToolStripMenuItem.Click += new System.EventHandler(this.editItemToolStripMenuItem_Click_1);
-            // 
-            // addItemToolStripMenuItem
-            // 
-            this.addItemToolStripMenuItem.Name = "addItemToolStripMenuItem";
-            this.addItemToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
-            this.addItemToolStripMenuItem.Text = "Add Item";
-            this.addItemToolStripMenuItem.Click += new System.EventHandler(this.addItemToolStripMenuItem_Click_1);
-            // 
-            // manageInventoryToolStripMenuItem
-            // 
-            this.manageInventoryToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addItemToolStripMenuItem,
-            this.editItemToolStripMenuItem,
-            this.removeItemToolStripMenuItem});
-            this.manageInventoryToolStripMenuItem.Name = "manageInventoryToolStripMenuItem";
-            this.manageInventoryToolStripMenuItem.Size = new System.Drawing.Size(115, 20);
-            this.manageInventoryToolStripMenuItem.Text = "Manage Inventory";
             // 
             // suspendUserToolStripMenuItem
             // 
@@ -252,9 +221,12 @@
             // 
             // dataGridView2
             // 
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.AllowUserToDeleteRows = false;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Location = new System.Drawing.Point(465, 212);
             this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
             this.dataGridView2.Size = new System.Drawing.Size(337, 457);
             this.dataGridView2.TabIndex = 20;
             // 
@@ -278,11 +250,20 @@
             // 
             // dataGridView5
             // 
+            this.dataGridView5.AllowUserToAddRows = false;
+            this.dataGridView5.AllowUserToDeleteRows = false;
             this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView5.Location = new System.Drawing.Point(29, 212);
             this.dataGridView5.Name = "dataGridView5";
+            this.dataGridView5.ReadOnly = true;
             this.dataGridView5.Size = new System.Drawing.Size(337, 457);
             this.dataGridView5.TabIndex = 19;
+            // 
+            // manageInventoryToolStripMenuItem
+            // 
+            this.manageInventoryToolStripMenuItem.Name = "manageInventoryToolStripMenuItem";
+            this.manageInventoryToolStripMenuItem.Size = new System.Drawing.Size(115, 20);
+            this.manageInventoryToolStripMenuItem.Text = "Manage Inventory";
             // 
             // Dashboard
             // 
@@ -323,10 +304,6 @@
         private System.Windows.Forms.Button todayNewPatronInsightButton;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.ToolStripMenuItem reportsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem removeItemToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem editItemToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem addItemToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem manageInventoryToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem suspendUserToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewPendingSuspensionsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem suspensionsToolStripMenuItem;
@@ -342,5 +319,6 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel6;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.DataGridView dataGridView5;
+        private System.Windows.Forms.ToolStripMenuItem manageInventoryToolStripMenuItem;
     }
 }
