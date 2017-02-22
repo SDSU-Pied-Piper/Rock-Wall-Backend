@@ -61,6 +61,8 @@ namespace SDSU_Rock_Wall_CRM
         {
             if (e.KeyCode == Keys.F7 && e.Control && e.Alt)
             {
+                var newForm = new InitialUser();
+                newForm.Show();
                 //TODO: Put in a new form so that Devs can add first accounts for delivery.
             }
         }

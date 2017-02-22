@@ -44,13 +44,13 @@
             this.manageUsersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dashboardMenuStrip = new System.Windows.Forms.MenuStrip();
+            this.manageInventoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.button4 = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.flowLayoutPanel6 = new System.Windows.Forms.FlowLayoutPanel();
             this.button7 = new System.Windows.Forms.Button();
             this.dataGridView5 = new System.Windows.Forms.DataGridView();
-            this.manageInventoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.flowLayoutPanel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
@@ -87,7 +87,7 @@
             this.dataGridView3.Location = new System.Drawing.Point(900, 212);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.ReadOnly = true;
-            this.dataGridView3.Size = new System.Drawing.Size(337, 457);
+            this.dataGridView3.Size = new System.Drawing.Size(337, 419);
             this.dataGridView3.TabIndex = 17;
             // 
             // todayTotalPatronInsightButton
@@ -201,6 +201,13 @@
             this.dashboardMenuStrip.TabIndex = 10;
             this.dashboardMenuStrip.Text = "menuStrip1";
             // 
+            // manageInventoryToolStripMenuItem
+            // 
+            this.manageInventoryToolStripMenuItem.Name = "manageInventoryToolStripMenuItem";
+            this.manageInventoryToolStripMenuItem.Size = new System.Drawing.Size(115, 20);
+            this.manageInventoryToolStripMenuItem.Text = "Manage Inventory";
+            this.manageInventoryToolStripMenuItem.Click += new System.EventHandler(this.manageInventoryToolStripMenuItem_Click);
+            // 
             // flowLayoutPanel3
             // 
             this.flowLayoutPanel3.Controls.Add(this.button4);
@@ -227,7 +234,7 @@
             this.dataGridView2.Location = new System.Drawing.Point(465, 212);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.Size = new System.Drawing.Size(337, 457);
+            this.dataGridView2.Size = new System.Drawing.Size(337, 419);
             this.dataGridView2.TabIndex = 20;
             // 
             // flowLayoutPanel6
@@ -256,14 +263,8 @@
             this.dataGridView5.Location = new System.Drawing.Point(29, 212);
             this.dataGridView5.Name = "dataGridView5";
             this.dataGridView5.ReadOnly = true;
-            this.dataGridView5.Size = new System.Drawing.Size(337, 457);
+            this.dataGridView5.Size = new System.Drawing.Size(337, 419);
             this.dataGridView5.TabIndex = 19;
-            // 
-            // manageInventoryToolStripMenuItem
-            // 
-            this.manageInventoryToolStripMenuItem.Name = "manageInventoryToolStripMenuItem";
-            this.manageInventoryToolStripMenuItem.Size = new System.Drawing.Size(115, 20);
-            this.manageInventoryToolStripMenuItem.Text = "Manage Inventory";
             // 
             // Dashboard
             // 

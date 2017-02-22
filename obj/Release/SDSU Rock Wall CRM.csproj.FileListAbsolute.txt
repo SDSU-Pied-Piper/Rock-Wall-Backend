@@ -13,3 +13,4 @@ F:\Code\Software Engineering\Rock Wall\obj\Release\SDSU_Rock_Wall_CRM.InventoryU
 F:\Code\Software Engineering\Rock Wall\bin\Release\ClosedXML.dll
 F:\Code\Software Engineering\Rock Wall\bin\Release\DocumentFormat.OpenXml.dll
 F:\Code\Software Engineering\Rock Wall\bin\Release\ClosedXML.pdb
+F:\Code\Software Engineering\Rock Wall\obj\Release\SDSU_Rock_Wall_CRM.InitialUser.resources

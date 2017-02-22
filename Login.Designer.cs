@@ -56,7 +56,7 @@
             this.loginLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.loginLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.loginLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.loginLayoutPanel.Size = new System.Drawing.Size(380, 172);
+            this.loginLayoutPanel.Size = new System.Drawing.Size(380, 162);
             this.loginLayoutPanel.TabIndex = 1;
             // 
             // usernameLabel
@@ -65,7 +65,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.usernameLabel.AutoSize = true;
             this.usernameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usernameLabel.Location = new System.Drawing.Point(3, 10);
+            this.usernameLabel.Location = new System.Drawing.Point(3, 7);
             this.usernameLabel.Margin = new System.Windows.Forms.Padding(3, 0, 1, 8);
             this.usernameLabel.Name = "usernameLabel";
             this.usernameLabel.Size = new System.Drawing.Size(195, 39);
@@ -77,7 +77,7 @@
             // 
             this.usernameField.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.usernameField.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usernameField.Location = new System.Drawing.Point(202, 15);
+            this.usernameField.Location = new System.Drawing.Point(202, 12);
             this.usernameField.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
             this.usernameField.Name = "usernameField";
             this.usernameField.Size = new System.Drawing.Size(175, 32);
@@ -89,7 +89,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.passwordLabel.AutoSize = true;
             this.passwordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwordLabel.Location = new System.Drawing.Point(3, 71);
+            this.passwordLabel.Location = new System.Drawing.Point(3, 68);
             this.passwordLabel.Margin = new System.Windows.Forms.Padding(3, 14, 3, 0);
             this.passwordLabel.Name = "passwordLabel";
             this.passwordLabel.Size = new System.Drawing.Size(193, 39);
@@ -101,7 +101,7 @@
             // 
             this.passwordField.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.passwordField.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwordField.Location = new System.Drawing.Point(202, 78);
+            this.passwordField.Location = new System.Drawing.Point(202, 72);
             this.passwordField.Margin = new System.Windows.Forms.Padding(3, 3, 3, 4);
             this.passwordField.Name = "passwordField";
             this.passwordField.Size = new System.Drawing.Size(175, 32);
@@ -111,7 +111,7 @@
             // loginButton
             // 
             this.loginButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.loginButton.Location = new System.Drawing.Point(289, 142);
+            this.loginButton.Location = new System.Drawing.Point(289, 132);
             this.loginButton.Name = "loginButton";
             this.loginButton.Size = new System.Drawing.Size(88, 27);
             this.loginButton.TabIndex = 4;
@@ -124,7 +124,7 @@
             this.AcceptButton = this.loginButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.ClientSize = new System.Drawing.Size(1264, 671);
             this.Controls.Add(this.loginLayoutPanel);
             this.Name = "loginForm";
             this.Text = "SDSU Rock Wall";

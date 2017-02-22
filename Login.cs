@@ -18,7 +18,7 @@ namespace SDSU_Rock_Wall_CRM
             InitializeComponent();
             this.KeyPreview = true;           
         }
-        private string hashPassword(string password)
+        public static string hashPassword(string password)
         {
             var bytes = new UTF8Encoding().GetBytes(password);
             byte[] hashbytes;

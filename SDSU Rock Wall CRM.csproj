@@ -65,6 +65,12 @@
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="Database.cs" />
+    <Compile Include="InitialUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InitialUser.Designer.cs">
+      <DependentUpon>InitialUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Inventory.cs" />
     <Compile Include="InventoryUI.cs">
       <SubType>Form</SubType>
@@ -85,6 +91,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InitialUser.resx">
+      <DependentUpon>InitialUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InventoryUI.resx">
       <DependentUpon>InventoryUI.cs</DependentUpon>
