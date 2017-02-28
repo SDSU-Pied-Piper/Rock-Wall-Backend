@@ -17,6 +17,8 @@ namespace SDSU_Rock_Wall_CRM
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            var report = new Report();
+            report.generateMasterReport();
             var loginForm = new loginForm();
             loginForm.Show();
             Application.Run();
