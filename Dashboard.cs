@@ -63,7 +63,6 @@ namespace SDSU_Rock_Wall_CRM
             {
                 var newForm = new InitialUser();
                 newForm.Show();
-                //TODO: Put in a new form so that Devs can add first accounts for delivery.
             }
         }
         private void addUserToolStripMenuItem_Click_1(object sender, EventArgs e)
@@ -132,11 +131,10 @@ namespace SDSU_Rock_Wall_CRM
 
         private void reportsToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            var dashboardForm = new BasicLayout();
+            var dashboardForm = new ReportUI();
             dashboardForm.Location = this.Location;
             dashboardForm.StartPosition = this.StartPosition;
             dashboardForm.WindowState = FormWindowState.Normal;
-            dashboardForm.titleOfDataLabel.Text = "Reports";
             dashboardForm.Show();
             this.Hide();
         }

@@ -119,11 +119,10 @@ namespace SDSU_Rock_Wall_CRM
 
         private void reportsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var dashBoard = new BasicLayout();
+            var dashBoard = new ReportUI();
             dashBoard.Location = this.Location;
             dashBoard.StartPosition = this.StartPosition;
             dashBoard.WindowState = FormWindowState.Normal;
-            dashBoard.titleOfDataLabel.Text = "Reports";
             dashBoard.Show();
             this.Hide();
         }

@@ -25,3 +25,4 @@ F:\Code\Software Engineering\Rock Wall\bin\Debug\DocumentFormat.OpenXml.dll
 F:\Code\Software Engineering\Rock Wall\bin\Debug\ClosedXML.pdb
 F:\Code\Software Engineering\Rock Wall\obj\Debug\SDSU_Rock_Wall_CRM.InitialUser.resources
 F:\Code\Software Engineering\Rock Wall\obj\Debug\SDSU_Rock_Wall_CRM.InventoryUI.resources
+F:\Code\Software Engineering\Rock Wall\obj\Debug\SDSU_Rock_Wall_CRM.ReportUI.resources
