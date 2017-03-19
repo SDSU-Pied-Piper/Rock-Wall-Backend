@@ -30,7 +30,7 @@
         {
             this.flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
             this.button6 = new System.Windows.Forms.Button();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.currentSuspensionsList = new System.Windows.Forms.DataGridView();
             this.todayTotalPatronInsightButton = new System.Windows.Forms.Button();
             this.todayNewPatronInsightButton = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
@@ -47,18 +47,18 @@
             this.manageInventoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.button4 = new System.Windows.Forms.Button();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.unhandeledIncidentsList = new System.Windows.Forms.DataGridView();
             this.flowLayoutPanel6 = new System.Windows.Forms.FlowLayoutPanel();
             this.button7 = new System.Windows.Forms.Button();
-            this.dataGridView5 = new System.Windows.Forms.DataGridView();
+            this.newPatronsList = new System.Windows.Forms.DataGridView();
             this.flowLayoutPanel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.currentSuspensionsList)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
             this.dashboardMenuStrip.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.unhandeledIncidentsList)).BeginInit();
             this.flowLayoutPanel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.newPatronsList)).BeginInit();
             this.SuspendLayout();
             // 
             // flowLayoutPanel5
@@ -79,16 +79,20 @@
             this.button6.Text = "Current Suspensions";
             this.button6.UseVisualStyleBackColor = true;
             // 
-            // dataGridView3
+            // currentSuspensionsList
             // 
-            this.dataGridView3.AllowUserToAddRows = false;
-            this.dataGridView3.AllowUserToDeleteRows = false;
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(900, 212);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.ReadOnly = true;
-            this.dataGridView3.Size = new System.Drawing.Size(337, 419);
-            this.dataGridView3.TabIndex = 17;
+            this.currentSuspensionsList.AllowUserToAddRows = false;
+            this.currentSuspensionsList.AllowUserToDeleteRows = false;
+            this.currentSuspensionsList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.currentSuspensionsList.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.currentSuspensionsList.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.currentSuspensionsList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.currentSuspensionsList.Location = new System.Drawing.Point(900, 212);
+            this.currentSuspensionsList.Name = "currentSuspensionsList";
+            this.currentSuspensionsList.ReadOnly = true;
+            this.currentSuspensionsList.RowHeadersVisible = false;
+            this.currentSuspensionsList.Size = new System.Drawing.Size(337, 419);
+            this.currentSuspensionsList.TabIndex = 17;
             // 
             // todayTotalPatronInsightButton
             // 
@@ -226,16 +230,20 @@
             this.button4.Text = "Unhandeled Incidents";
             this.button4.UseVisualStyleBackColor = true;
             // 
-            // dataGridView2
+            // unhandeledIncidentsList
             // 
-            this.dataGridView2.AllowUserToAddRows = false;
-            this.dataGridView2.AllowUserToDeleteRows = false;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(465, 212);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.Size = new System.Drawing.Size(337, 419);
-            this.dataGridView2.TabIndex = 20;
+            this.unhandeledIncidentsList.AllowUserToAddRows = false;
+            this.unhandeledIncidentsList.AllowUserToDeleteRows = false;
+            this.unhandeledIncidentsList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.unhandeledIncidentsList.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.unhandeledIncidentsList.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.unhandeledIncidentsList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.unhandeledIncidentsList.Location = new System.Drawing.Point(465, 212);
+            this.unhandeledIncidentsList.Name = "unhandeledIncidentsList";
+            this.unhandeledIncidentsList.ReadOnly = true;
+            this.unhandeledIncidentsList.RowHeadersVisible = false;
+            this.unhandeledIncidentsList.Size = new System.Drawing.Size(337, 419);
+            this.unhandeledIncidentsList.TabIndex = 20;
             // 
             // flowLayoutPanel6
             // 
@@ -255,16 +263,20 @@
             this.button7.Text = "New Patrons";
             this.button7.UseVisualStyleBackColor = true;
             // 
-            // dataGridView5
+            // newPatronsList
             // 
-            this.dataGridView5.AllowUserToAddRows = false;
-            this.dataGridView5.AllowUserToDeleteRows = false;
-            this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView5.Location = new System.Drawing.Point(29, 212);
-            this.dataGridView5.Name = "dataGridView5";
-            this.dataGridView5.ReadOnly = true;
-            this.dataGridView5.Size = new System.Drawing.Size(337, 419);
-            this.dataGridView5.TabIndex = 19;
+            this.newPatronsList.AllowUserToAddRows = false;
+            this.newPatronsList.AllowUserToDeleteRows = false;
+            this.newPatronsList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.newPatronsList.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.newPatronsList.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.newPatronsList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.newPatronsList.Location = new System.Drawing.Point(29, 212);
+            this.newPatronsList.Name = "newPatronsList";
+            this.newPatronsList.ReadOnly = true;
+            this.newPatronsList.RowHeadersVisible = false;
+            this.newPatronsList.Size = new System.Drawing.Size(337, 419);
+            this.newPatronsList.TabIndex = 19;
             // 
             // Dashboard
             // 
@@ -273,25 +285,26 @@
             this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.flowLayoutPanel3);
             this.Controls.Add(this.flowLayoutPanel6);
-            this.Controls.Add(this.dataGridView5);
-            this.Controls.Add(this.dataGridView2);
+            this.Controls.Add(this.newPatronsList);
+            this.Controls.Add(this.unhandeledIncidentsList);
             this.Controls.Add(this.flowLayoutPanel5);
-            this.Controls.Add(this.dataGridView3);
+            this.Controls.Add(this.currentSuspensionsList);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.dashboardMenuStrip);
             this.KeyPreview = true;
             this.Name = "Dashboard";
             this.Text = "Dashboard";
+            this.Load += new System.EventHandler(this.loadTables);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Dashboard_KeyDown);
             this.flowLayoutPanel5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.currentSuspensionsList)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.dashboardMenuStrip.ResumeLayout(false);
             this.dashboardMenuStrip.PerformLayout();
             this.flowLayoutPanel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.unhandeledIncidentsList)).EndInit();
             this.flowLayoutPanel6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.newPatronsList)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -300,7 +313,7 @@
         #endregion
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel5;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.DataGridView currentSuspensionsList;
         private System.Windows.Forms.Button todayTotalPatronInsightButton;
         private System.Windows.Forms.Button todayNewPatronInsightButton;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
@@ -316,10 +329,10 @@
         private System.Windows.Forms.MenuStrip dashboardMenuStrip;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView unhandeledIncidentsList;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel6;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.DataGridView dataGridView5;
+        private System.Windows.Forms.DataGridView newPatronsList;
         private System.Windows.Forms.ToolStripMenuItem manageInventoryToolStripMenuItem;
     }
 }

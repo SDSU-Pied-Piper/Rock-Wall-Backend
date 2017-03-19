@@ -236,7 +236,7 @@ namespace SDSU_Rock_Wall_CRM
             Database db = new Database();
             SqlCommand command = new SqlCommand("Select firstName,lastName,studentID,dateOfBirth,gender,dateSuspended,dateUnsuspended from Patrons where isSuspended=1", db.con);
             DataSet suspensions = db.sendSelectCommand(command);
-            command.CommandText = "Select firstName,lastName,studentID,dateOfBirth,gender from Patrons where isSuspended=0 And suspensionReason Is Not NULL";
+            command.CommandText = "Select firstName,lastName,studentID,dateOfBirth,gender from Patrons where isWaiverSigned=1 And isSuspended=0 And suspensionReason Is Not NULL";
             DataSet unhandledSuspensions = db.sendSelectCommand(command);
             StringBuilder cell = new StringBuilder("A2");
             for (int i = 0; i < suspensions.Tables[0].Rows.Count; i++)

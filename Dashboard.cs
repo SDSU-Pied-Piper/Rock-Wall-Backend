@@ -150,5 +150,34 @@ namespace SDSU_Rock_Wall_CRM
             var inventory = new Inventory();
             this.Hide();
         }
+
+        private void loadTables(object sender, EventArgs e)
+        {
+            Database db = new Database();
+            SqlCommand command = new SqlCommand("Select firstName,lastName From Patrons Where isWaiverSigned=1 And dateOfCreation=@dateCreated", db.con);
+            command.Parameters.AddWithValue("@dateCreated", DateTime.Now.ToShortDateString());
+            DataSet newPatrons = db.sendSelectCommand(command);
+            this.newPatronsList.DataSource = newPatrons.Tables[0];
+            this.newPatronsList.Columns[0].HeaderText = "First Name";
+            this.newPatronsList.Columns[1].HeaderText = "Last Name";
+            this.newPatronsList.Columns[0].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            this.newPatronsList.Columns[1].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+            command.CommandText = "Select firstName,lastName from Patrons Where isWaiverSigned=1 And isSuspended=0 And suspensionReason Is Not NULL";
+            DataSet unhandeledSuspensions = db.sendSelectCommand(command);
+            this.unhandeledIncidentsList.DataSource = unhandeledSuspensions.Tables[0];
+            this.unhandeledIncidentsList.Columns[0].HeaderText = "First Name";
+            this.unhandeledIncidentsList.Columns[1].HeaderText = "Last Name";
+            this.unhandeledIncidentsList.Columns[0].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            this.unhandeledIncidentsList.Columns[1].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+            command.CommandText = "Select firstName,lastName From Patrons Where isWaiverSigned=1 And isSuspended=1";
+            DataSet susependedUsers = db.sendSelectCommand(command);
+            this.currentSuspensionsList.DataSource = susependedUsers.Tables[0];
+            this.currentSuspensionsList.Columns[0].HeaderText = "First Name";
+            this.currentSuspensionsList.Columns[1].HeaderText = "Last Name";
+            this.currentSuspensionsList.Columns[0].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            this.currentSuspensionsList.Columns[1].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+        }
     }
 }
