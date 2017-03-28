@@ -65,17 +65,6 @@ namespace SDSU_Rock_Wall_CRM
                 newForm.Show();
             }
         }
-        private void addUserToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {
-            var dashboardForm = new BasicLayout();
-            dashboardForm.Location = this.Location;
-            dashboardForm.StartPosition = this.StartPosition;
-            dashboardForm.WindowState = FormWindowState.Normal;
-            dashboardForm.titleOfDataLabel.Text = "Add User";
-            dashboardForm.Show();
-            this.Hide();
-        }
-
         private void homeToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             var dashBoard = new Dashboard();
@@ -85,29 +74,6 @@ namespace SDSU_Rock_Wall_CRM
             dashBoard.Show();
             this.Hide();
         }
-
-        private void editUserToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {
-            var dashboardForm = new BasicLayout();
-            dashboardForm.Location = this.Location;
-            dashboardForm.StartPosition = this.StartPosition;
-            dashboardForm.WindowState = FormWindowState.Normal;
-            dashboardForm.titleOfDataLabel.Text = "Edit User";
-            dashboardForm.Show();
-            this.Hide();
-        }
-
-        private void deleteUserToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {
-            var dashboardForm = new BasicLayout();
-            dashboardForm.Location = this.Location;
-            dashboardForm.StartPosition = this.StartPosition;
-            dashboardForm.WindowState = FormWindowState.Normal;
-            dashboardForm.titleOfDataLabel.Text = "Delete User";
-            dashboardForm.Show();
-            this.Hide();
-        }
-
         private void viewPendingSuspensionsToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             var dashboardForm = new BasicLayout();
@@ -178,6 +144,17 @@ namespace SDSU_Rock_Wall_CRM
             this.currentSuspensionsList.Columns[1].HeaderText = "Last Name";
             this.currentSuspensionsList.Columns[0].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
             this.currentSuspensionsList.Columns[1].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+        }
+
+        private void manageUsersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var dashboardForm = new ManageUserUI();
+            dashboardForm.Location = this.Location;
+            dashboardForm.StartPosition = this.StartPosition;
+            dashboardForm.WindowState = FormWindowState.Normal;
+            dashboardForm.titleOfDataLabel.Text = "Manage Inventory";
+            dashboardForm.Show();
+            this.Hide();
         }
     }
 }

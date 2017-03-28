@@ -138,5 +138,16 @@ namespace SDSU_Rock_Wall_CRM
             var inventory = new Inventory();
             this.Hide();
         }
+
+        private void manageUsersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var dashboardForm = new ManageUserUI();
+            dashboardForm.Location = this.Location;
+            dashboardForm.StartPosition = this.StartPosition;
+            dashboardForm.WindowState = FormWindowState.Normal;
+            dashboardForm.titleOfDataLabel.Text = "Manage Inventory";
+            dashboardForm.Show();
+            this.Hide();
+        }
     }
 }

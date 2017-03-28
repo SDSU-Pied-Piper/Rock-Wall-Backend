@@ -1,4 +1,5 @@
 ﻿using System.Data;
+using System.IO;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
@@ -14,7 +15,14 @@ namespace SDSU_Rock_Wall_CRM
         {
             con = new SqlConnection(connectionString);
         }
-
+        public MemoryStream getImage(string firstName, string lastName, string dateOfBirth)
+        {
+            Database db = new Database();
+            SqlCommand command = new SqlCommand("Select image From Waiver Where userID = (Select id From Patrons Where firstName=@fName And lastName=@lName And dateOfBirth=@DOB)", db.con);
+            DataSet result = db.sendSelectCommand(command);
+            MemoryStream ms = new MemoryStream((byte[])result.Tables[0].Rows[0][0]);
+            return ms;
+        }
         public DataSet sendSelectCommand(SqlCommand command)
         {
             DataSet returnedData = new DataSet();
