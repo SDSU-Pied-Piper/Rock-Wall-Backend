@@ -60,11 +60,14 @@ namespace SDSU_Rock_Wall_CRM
             workSheets[1].Cell("C1").Style.Font.Bold = true;
             workSheets[1].Cell("D1").Value = "Gender";
             workSheets[1].Cell("D1").Style.Font.Bold = true;
-            workSheets[1].Cell("E1").Value = "Suspension Start Date";
+            workSheets[1].Cell("E1").Value = "Date Of Birth";
             workSheets[1].Cell("E1").Style.Font.Bold = true;
-            workSheets[1].Cell("F1").Value = "Suspension End Date";
+            workSheets[1].Cell("F1").Value = "Suspension Start Date";
             workSheets[1].Cell("F1").Style.Font.Bold = true;
+            workSheets[1].Cell("G1").Value = "Suspension End Date";
+            workSheets[1].Cell("G1").Style.Font.Bold = true;
             workSheets[1].Columns().AdjustToContents();
+            workSheets[1].Rows().AdjustToContents();
 
             workSheets[2].Cell("A1").Value = "Item Name";
             workSheets[2].Cell("A1").Style.Font.Bold = true;
@@ -208,10 +211,12 @@ namespace SDSU_Rock_Wall_CRM
             workSheets[0].Cell("C1").Style.Font.Bold = true;
             workSheets[0].Cell("D1").Value = "Gender";
             workSheets[0].Cell("D1").Style.Font.Bold = true;
-            workSheets[0].Cell("E1").Value = "Suspension Start Date";
+            workSheets[0].Cell("E1").Value = "Date Of Birth";
             workSheets[0].Cell("E1").Style.Font.Bold = true;
-            workSheets[0].Cell("F1").Value = "Suspension End Date";
+            workSheets[0].Cell("F1").Value = "Suspension Start Date";
             workSheets[0].Cell("F1").Style.Font.Bold = true;
+            workSheets[0].Cell("G1").Value = "Suspension End Date";
+            workSheets[0].Cell("G1").Style.Font.Bold = true;
             workSheets[0].Columns().AdjustToContents();
             workSheets[0].Rows().AdjustToContents();
 
@@ -223,10 +228,12 @@ namespace SDSU_Rock_Wall_CRM
             workSheets[1].Cell("C1").Style.Font.Bold = true;
             workSheets[1].Cell("D1").Value = "Gender";
             workSheets[1].Cell("D1").Style.Font.Bold = true;
-            workSheets[1].Cell("E1").Value = "Suspension Start Date";
+            workSheets[1].Cell("E1").Value = "Date Of Birth";
             workSheets[1].Cell("E1").Style.Font.Bold = true;
-            workSheets[1].Cell("F1").Value = "Suspension End Date";
+            workSheets[1].Cell("F1").Value = "Suspension Start Date";
             workSheets[1].Cell("F1").Style.Font.Bold = true;
+            workSheets[1].Cell("G1").Value = "Suspension End Date";
+            workSheets[1].Cell("G1").Style.Font.Bold = true;
             workSheets[1].Columns().AdjustToContents();
             workSheets[1].Rows().AdjustToContents();
             #endregion
