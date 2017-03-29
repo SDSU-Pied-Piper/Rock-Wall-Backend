@@ -105,6 +105,12 @@
     <Compile Include="ReportUI.Designer.cs">
       <DependentUpon>ReportUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="SuspendUserUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SuspendUserUI.Designer.cs">
+      <DependentUpon>SuspendUserUI.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="BasicLayout.resx">
       <DependentUpon>BasicLayout.cs</DependentUpon>
     </EmbeddedResource>
@@ -137,6 +143,9 @@
     </Compile>
     <EmbeddedResource Include="ReportUI.resx">
       <DependentUpon>ReportUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SuspendUserUI.resx">
+      <DependentUpon>SuspendUserUI.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

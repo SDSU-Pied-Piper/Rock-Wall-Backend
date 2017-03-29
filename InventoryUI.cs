@@ -16,7 +16,14 @@ namespace SDSU_Rock_Wall_CRM
         private void InventoryUI_Load(object sender, EventArgs e)
         {
             var inventory = new Inventory();
-            dataGridView1.DataSource = inventory.displayInventory(dataGridView1);
+            try
+            {
+                dataGridView1.DataSource = inventory.displayInventory(dataGridView1);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("A Date is not a valid date!");
+            }
             dataGridView1.Columns[0].HeaderText = "Item Name";
             dataGridView1.Columns[1].HeaderText = "ID";
             dataGridView1.Columns[2].HeaderText = "Purchase Date";

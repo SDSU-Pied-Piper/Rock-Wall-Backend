@@ -32,8 +32,6 @@
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manageUsersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.suspensionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewPendingSuspensionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.suspendUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manageInventoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
@@ -74,26 +72,10 @@
             // 
             // suspensionsToolStripMenuItem
             // 
-            this.suspensionsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.viewPendingSuspensionsToolStripMenuItem,
-            this.suspendUserToolStripMenuItem});
             this.suspensionsToolStripMenuItem.Name = "suspensionsToolStripMenuItem";
             this.suspensionsToolStripMenuItem.Size = new System.Drawing.Size(84, 20);
             this.suspensionsToolStripMenuItem.Text = "Suspensions";
-            // 
-            // viewPendingSuspensionsToolStripMenuItem
-            // 
-            this.viewPendingSuspensionsToolStripMenuItem.Name = "viewPendingSuspensionsToolStripMenuItem";
-            this.viewPendingSuspensionsToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
-            this.viewPendingSuspensionsToolStripMenuItem.Text = "View Pending Suspensions";
-            this.viewPendingSuspensionsToolStripMenuItem.Click += new System.EventHandler(this.viewPendingSuspensionsToolStripMenuItem_Click);
-            // 
-            // suspendUserToolStripMenuItem
-            // 
-            this.suspendUserToolStripMenuItem.Name = "suspendUserToolStripMenuItem";
-            this.suspendUserToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
-            this.suspendUserToolStripMenuItem.Text = "Suspend User";
-            this.suspendUserToolStripMenuItem.Click += new System.EventHandler(this.suspendUserToolStripMenuItem_Click);
+            this.suspensionsToolStripMenuItem.Click += new System.EventHandler(this.suspensionsToolStripMenuItem_Click);
             // 
             // manageInventoryToolStripMenuItem
             // 
@@ -172,8 +154,6 @@
         private System.Windows.Forms.ToolStripMenuItem homeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem manageUsersToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem suspensionsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem viewPendingSuspensionsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem suspendUserToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem manageInventoryToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reportsToolStripMenuItem;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;

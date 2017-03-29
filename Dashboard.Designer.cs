@@ -35,8 +35,6 @@
             this.todayNewPatronInsightButton = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.suspendUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewPendingSuspensionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.suspensionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manageUsersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -127,28 +125,12 @@
             this.reportsToolStripMenuItem.Text = "Reports";
             this.reportsToolStripMenuItem.Click += new System.EventHandler(this.reportsToolStripMenuItem_Click_1);
             // 
-            // suspendUserToolStripMenuItem
-            // 
-            this.suspendUserToolStripMenuItem.Name = "suspendUserToolStripMenuItem";
-            this.suspendUserToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
-            this.suspendUserToolStripMenuItem.Text = "Suspend User";
-            this.suspendUserToolStripMenuItem.Click += new System.EventHandler(this.suspendUserToolStripMenuItem_Click_1);
-            // 
-            // viewPendingSuspensionsToolStripMenuItem
-            // 
-            this.viewPendingSuspensionsToolStripMenuItem.Name = "viewPendingSuspensionsToolStripMenuItem";
-            this.viewPendingSuspensionsToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
-            this.viewPendingSuspensionsToolStripMenuItem.Text = "View Pending Suspensions";
-            this.viewPendingSuspensionsToolStripMenuItem.Click += new System.EventHandler(this.viewPendingSuspensionsToolStripMenuItem_Click_1);
-            // 
             // suspensionsToolStripMenuItem
             // 
-            this.suspensionsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.viewPendingSuspensionsToolStripMenuItem,
-            this.suspendUserToolStripMenuItem});
             this.suspensionsToolStripMenuItem.Name = "suspensionsToolStripMenuItem";
             this.suspensionsToolStripMenuItem.Size = new System.Drawing.Size(84, 20);
             this.suspensionsToolStripMenuItem.Text = "Suspensions";
+            this.suspensionsToolStripMenuItem.Click += new System.EventHandler(this.suspensionsToolStripMenuItem_Click);
             // 
             // manageUsersToolStripMenuItem
             // 
@@ -291,8 +273,6 @@
         private System.Windows.Forms.Button todayNewPatronInsightButton;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.ToolStripMenuItem reportsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem suspendUserToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem viewPendingSuspensionsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem suspensionsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem manageUsersToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem homeToolStripMenuItem;

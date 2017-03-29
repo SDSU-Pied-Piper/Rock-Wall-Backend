@@ -149,5 +149,16 @@ namespace SDSU_Rock_Wall_CRM
             dashboardForm.Show();
             this.Hide();
         }
+
+        private void suspensionsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var dashboardForm = new SuspendUserUI();
+            dashboardForm.Location = this.Location;
+            dashboardForm.StartPosition = this.StartPosition;
+            dashboardForm.WindowState = FormWindowState.Normal;
+            dashboardForm.titleOfDataLabel.Text = "Suspend Users";
+            dashboardForm.Show();
+            this.Hide();
+        }
     }
 }
