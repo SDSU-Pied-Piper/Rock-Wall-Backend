@@ -158,5 +158,13 @@ namespace SDSU_Rock_Wall_CRM
             command.Parameters.AddWithValue("@dateOfBirth", DateTime.Parse(userDataGridView.Rows[currentSelectedIndex].Cells[4].Value.ToString()).ToShortDateString());
             db.sendUpdateCommand(command);
         }
+
+        private void buttonSeeWaiver_Click(object sender, EventArgs e)
+        {
+            Database db = new Database();
+            int currentSelectedIndex = userDataGridView.CurrentRow.Index;
+            var displayWaiverBox = new DisplayWaiverUI(db.getImage(userDataGridView.Rows[currentSelectedIndex].Cells[1].Value.ToString(), userDataGridView.Rows[currentSelectedIndex].Cells[2].Value.ToString(), userDataGridView.Rows[currentSelectedIndex].Cells[4].Value.ToString()),userDataGridView.Rows[currentSelectedIndex].Cells[1].Value.ToString(), userDataGridView.Rows[currentSelectedIndex].Cells[2].Value.ToString());
+            displayWaiverBox.Show();
+        }
     }
 }

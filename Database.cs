@@ -18,7 +18,10 @@ namespace SDSU_Rock_Wall_CRM
         public MemoryStream getImage(string firstName, string lastName, string dateOfBirth)
         {
             Database db = new Database();
-            SqlCommand command = new SqlCommand("Select image From Waiver Where userID = (Select id From Patrons Where firstName=@fName And lastName=@lName And dateOfBirth=@DOB)", db.con);
+            SqlCommand command = new SqlCommand("Select waiverImage From Waiver Where userID = (Select id From Patrons Where firstName=@fName And lastName=@lName And dateOfBirth=@DOB)", db.con);
+            command.Parameters.AddWithValue("fName", firstName);
+            command.Parameters.AddWithValue("lName", lastName);
+            command.Parameters.AddWithValue("DOB", dateOfBirth);
             DataSet result = db.sendSelectCommand(command);
             MemoryStream ms = new MemoryStream((byte[])result.Tables[0].Rows[0][0]);
             return ms;

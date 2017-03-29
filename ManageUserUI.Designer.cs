@@ -60,6 +60,7 @@
             this.buttonSeeWaiver.TabIndex = 17;
             this.buttonSeeWaiver.Text = "See Waiver";
             this.buttonSeeWaiver.UseVisualStyleBackColor = true;
+            this.buttonSeeWaiver.Click += new System.EventHandler(this.buttonSeeWaiver_Click);
             // 
             // buttonUpdatePatron
             // 

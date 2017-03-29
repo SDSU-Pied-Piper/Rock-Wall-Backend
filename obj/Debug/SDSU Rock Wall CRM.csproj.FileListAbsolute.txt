@@ -27,3 +27,4 @@ F:\Code\Software Engineering\Rock Wall\obj\Debug\SDSU_Rock_Wall_CRM.InitialUser.
 F:\Code\Software Engineering\Rock Wall\obj\Debug\SDSU_Rock_Wall_CRM.InventoryUI.resources
 F:\Code\Software Engineering\Rock Wall\obj\Debug\SDSU_Rock_Wall_CRM.ReportUI.resources
 F:\Code\Software Engineering\Rock Wall\obj\Debug\SDSU_Rock_Wall_CRM.ManageUserUI.resources
+F:\Code\Software Engineering\Rock Wall\obj\Debug\SDSU_Rock_Wall_CRM.DisplayWaiverUI.resources

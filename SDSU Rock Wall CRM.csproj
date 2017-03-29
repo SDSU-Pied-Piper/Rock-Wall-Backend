@@ -65,6 +65,12 @@
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="Database.cs" />
+    <Compile Include="DisplayWaiverUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DisplayWaiverUI.Designer.cs">
+      <DependentUpon>DisplayWaiverUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="InitialUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +110,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DisplayWaiverUI.resx">
+      <DependentUpon>DisplayWaiverUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InitialUser.resx">
       <DependentUpon>InitialUser.cs</DependentUpon>
