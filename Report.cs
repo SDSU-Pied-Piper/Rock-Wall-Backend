@@ -51,11 +51,6 @@ namespace SDSU_Rock_Wall_CRM
             workSheets[0].Cell("H1").Style.Font.Bold = true;
             workSheets[0].Cell("I1").Value = "Last Check In";
             workSheets[0].Cell("I1").Style.Font.Bold = true;
-            workSheets[0].Cell("J1").Value = "Number of Check Ins";
-            workSheets[0].Cell("J1").Style.Font.Bold = true;
-            workSheets[0].Cell("K1").Value = "Mailing List";
-            workSheets[0].Cell("K1").Style.Font.Bold = true;
-            workSheets[0].Columns().AdjustToContents();
 
             workSheets[1].Cell("A1").Value = "First Name";
             workSheets[1].Cell("A1").Style.Font.Bold = true;
@@ -87,12 +82,14 @@ namespace SDSU_Rock_Wall_CRM
             workSheets[3].Cell("B1").Style.Font.Bold = true;
             workSheets[3].Cell("C1").Value = "Student ID";
             workSheets[3].Cell("C1").Style.Font.Bold = true;
-            workSheets[3].Cell("D1").Value = "Gender";
+            workSheets[3].Cell("D1").Value = "Date Of Birth";
             workSheets[3].Cell("D1").Style.Font.Bold = true;
-            workSheets[3].Cell("E1").Value = "Belay Certified";
+            workSheets[3].Cell("E1").Value = "Gender";
             workSheets[3].Cell("E1").Style.Font.Bold = true;
-            workSheets[3].Cell("F1").Value = "Lead Certified";
+            workSheets[3].Cell("F1").Value = "Belay Certified";
             workSheets[3].Cell("F1").Style.Font.Bold = true;
+            workSheets[3].Cell("G1").Value = "Lead Certified";
+            workSheets[3].Cell("G1").Style.Font.Bold = true;
             workSheets[3].Columns().AdjustToContents();
         }
         private void inventorySetUp(XLWorkbook workbook, List<IXLWorksheet> workSheets)
@@ -132,14 +129,14 @@ namespace SDSU_Rock_Wall_CRM
         private void userInformationSetUp(XLWorkbook workbook, List<IXLWorksheet> workSheets)
         {
             Database db = new Database();
-            SqlCommand command = new SqlCommand("Select firstName,lastName,studentID,dateOfBirth,gender,isSuspended,isBlayCertified,isLeadCertified,lastCheckIn,mailingList from Patrons where isWaiverSigned=1", db.con);
+            SqlCommand command = new SqlCommand("Select firstName,lastName,studentID,dateOfBirth,gender,isSuspended,isBlayCertified,isLeadCertified,lastCheckIn from Patrons where isWaiverSigned=1", db.con);
             DataSet users = db.sendSelectCommand(command);
             StringBuilder cell = new StringBuilder("A2");
             for (int i = 0; i < users.Tables[0].Rows.Count; i++)
             {
                 for (int j = 0; j < users.Tables[0].Columns.Count; j++)
                 {
-                    workSheets[2].Cell(cell.ToString()).Value = users.Tables[0].Rows[i][j];
+                    workSheets[0].Cell(cell.ToString()).Value = users.Tables[0].Rows[i][j];
                     cell[0] = (char)((int)(cell[0]) + 1);
                 }
                 cell[0] = 'A';
@@ -273,7 +270,7 @@ namespace SDSU_Rock_Wall_CRM
             workSheets.Add(workBook.Worksheets.Add("Blay Users"));
             workSheets.Add(workBook.Worksheets.Add("Lead Users"));
             Database db = new Database();
-            SqlCommand command = new SqlCommand("Select firstName,lastName,studentID,dateOfBirth,gender,isBlayCertified,isLeadCertified from Patrons where isWaiverSigned=1 And (isBlayCertified = 1 Or isLeadCertified = 1)");
+            SqlCommand command = new SqlCommand("Select firstName,lastName,studentID,dateOfBirth,gender,isBlayCertified,isLeadCertified From [dbo].[Patrons] Where isWaiverSigned=1 And isBlayCertified = 1 Or isLeadCertified = 1",db.con);
             #region Sheat Headings
             workSheets[0].Cell("A1").Value = "First Name";
             workSheets[0].Cell("A1").Style.Font.Bold = true;
@@ -281,12 +278,14 @@ namespace SDSU_Rock_Wall_CRM
             workSheets[0].Cell("B1").Style.Font.Bold = true;
             workSheets[0].Cell("C1").Value = "Student ID";
             workSheets[0].Cell("C1").Style.Font.Bold = true;
-            workSheets[0].Cell("D1").Value = "Gender";
+            workSheets[0].Cell("D1").Value = "Date Of Birth";
             workSheets[0].Cell("D1").Style.Font.Bold = true;
-            workSheets[0].Cell("E1").Value = "Belay Certified";
+            workSheets[0].Cell("E1").Value = "Gender";
             workSheets[0].Cell("E1").Style.Font.Bold = true;
-            workSheets[0].Cell("F1").Value = "Lead Certified";
+            workSheets[0].Cell("F1").Value = "Belay Certified";
             workSheets[0].Cell("F1").Style.Font.Bold = true;
+            workSheets[0].Cell("G1").Value = "Lead Certified";
+            workSheets[0].Cell("G1").Style.Font.Bold = true;
             workSheets[0].Columns().AdjustToContents();
 
             workSheets[1].Cell("A1").Value = "First Name";
@@ -295,12 +294,14 @@ namespace SDSU_Rock_Wall_CRM
             workSheets[1].Cell("B1").Style.Font.Bold = true;
             workSheets[1].Cell("C1").Value = "Student ID";
             workSheets[1].Cell("C1").Style.Font.Bold = true;
-            workSheets[1].Cell("D1").Value = "Gender";
+            workSheets[1].Cell("D1").Value = "Date Of Birth";
             workSheets[1].Cell("D1").Style.Font.Bold = true;
-            workSheets[1].Cell("E1").Value = "Belay Certified";
+            workSheets[1].Cell("E1").Value = "Gender";
             workSheets[1].Cell("E1").Style.Font.Bold = true;
-            workSheets[1].Cell("F1").Value = "Lead Certified";
+            workSheets[1].Cell("F1").Value = "Belay Certified";
             workSheets[1].Cell("F1").Style.Font.Bold = true;
+            workSheets[1].Cell("G1").Value = "Lead Certified";
+            workSheets[1].Cell("G1").Style.Font.Bold = true;
             workSheets[1].Columns().AdjustToContents();
 
             workSheets[2].Cell("A1").Value = "First Name";
@@ -309,12 +310,14 @@ namespace SDSU_Rock_Wall_CRM
             workSheets[2].Cell("B1").Style.Font.Bold = true;
             workSheets[2].Cell("C1").Value = "Student ID";
             workSheets[2].Cell("C1").Style.Font.Bold = true;
-            workSheets[2].Cell("D1").Value = "Gender";
+            workSheets[2].Cell("D1").Value = "Date Of Birth";
             workSheets[2].Cell("D1").Style.Font.Bold = true;
-            workSheets[2].Cell("E1").Value = "Belay Certified";
+            workSheets[2].Cell("E1").Value = "Gender";
             workSheets[2].Cell("E1").Style.Font.Bold = true;
-            workSheets[2].Cell("F1").Value = "Lead Certified";
+            workSheets[2].Cell("F1").Value = "Belay Certified";
             workSheets[2].Cell("F1").Style.Font.Bold = true;
+            workSheets[2].Cell("G1").Value = "Lead Certified";
+            workSheets[2].Cell("G1").Style.Font.Bold = true;
             workSheets[2].Columns().AdjustToContents();
             #endregion
             DataSet allUsers = db.sendSelectCommand(command);
@@ -355,6 +358,10 @@ namespace SDSU_Rock_Wall_CRM
                 cell[0] = 'A';
                 cell[1] = (char)((int)(cell[1]) + 1);
             }
+            String fileName = String.Format("Certified Users Report {0} {1}", DateTime.Now.ToShortDateString(), DateTime.Now.ToShortTimeString());
+            Regex rgx = new Regex("[^a-zA-Z0-9 -]");
+            fileName = rgx.Replace(fileName, "");
+            workBook.SaveAs(String.Format("{0}.xlsx", fileName));
         }
     }
 }
