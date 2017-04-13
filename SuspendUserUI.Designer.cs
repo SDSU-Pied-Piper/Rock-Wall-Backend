@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SuspendUserUI));
             this.userDataGridView = new System.Windows.Forms.DataGridView();
             this.buttonUpdatePatron = new System.Windows.Forms.Button();
             this.searchUserButton = new System.Windows.Forms.Button();
@@ -108,8 +109,9 @@
             this.Controls.Add(this.lastNameSearch);
             this.Controls.Add(this.buttonUpdatePatron);
             this.Controls.Add(this.userDataGridView);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SuspendUserUI";
-            this.Text = "SuspendUserUI";
+            this.Text = "Suspend Users";
             this.Load += new System.EventHandler(this.SuspendUserUI_Load);
             this.Controls.SetChildIndex(this.titleOfDataLabel, 0);
             this.Controls.SetChildIndex(this.userDataGridView, 0);

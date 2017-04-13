@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReportUI));
             this.reportListing = new System.Windows.Forms.ListBox();
             this.moveRightButton = new System.Windows.Forms.Button();
             this.moveLeftButton = new System.Windows.Forms.Button();
@@ -117,8 +118,9 @@
             this.Controls.Add(this.moveLeftButton);
             this.Controls.Add(this.moveRightButton);
             this.Controls.Add(this.reportListing);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ReportUI";
-            this.Text = "ReportUI";
+            this.Text = "Reports";
             this.Controls.SetChildIndex(this.titleOfDataLabel, 0);
             this.Controls.SetChildIndex(this.reportListing, 0);
             this.Controls.SetChildIndex(this.moveRightButton, 0);

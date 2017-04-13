@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InventoryUI));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.inventoryUpdateButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -69,8 +70,9 @@
             this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.inventoryUpdateButton);
             this.Controls.Add(this.dataGridView1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "InventoryUI";
-            this.Text = "InventoryUI";
+            this.Text = "Inventory";
             this.Load += new System.EventHandler(this.InventoryUI_Load);
             this.Controls.SetChildIndex(this.dataGridView1, 0);
             this.Controls.SetChildIndex(this.inventoryUpdateButton, 0);

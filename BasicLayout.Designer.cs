@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BasicLayout));
             this.dashboardMenuStrip = new System.Windows.Forms.MenuStrip();
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manageUsersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -138,6 +139,7 @@
             this.Controls.Add(this.titleOfDataLabel);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.dashboardMenuStrip);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "BasicLayout";
             this.Text = "BasicLayout";
             this.dashboardMenuStrip.ResumeLayout(false);

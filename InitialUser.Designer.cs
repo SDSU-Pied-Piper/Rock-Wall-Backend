@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InitialUser));
             this.addManager = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.desiredUserNameLabel = new System.Windows.Forms.Label();
@@ -113,6 +114,7 @@
             this.Controls.Add(this.desiredUserNameLabel);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.addManager);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "InitialUser";
             this.Text = "InitialUser";
             this.ResumeLayout(false);
