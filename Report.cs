@@ -105,11 +105,24 @@ namespace SDSU_Rock_Wall_CRM
             {
                 for (int j = 0; j < inventory.Tables[0].Columns.Count; j++)
                 {
-                    workSheets[2].Cell(cell.ToString()).Value = inventory.Tables[0].Rows[i][j];
-                    cell[0] = (char)((int)(cell[0]) + 1);
+                    try
+                    {
+                        workSheets[2].Cell(cell.ToString()).Value = inventory.Tables[0].Rows[i][j];
+                        cell[0] = (char)((int)(cell[0]) + 1);
+                    }
+                    catch (NullReferenceException ex)
+                    {
+                        cell[0] = (char)((int)(cell[0]) + 1);
+                    }
                 }
-                cell[0] = 'A';
-                cell[1] = (char)((int)(cell[1]) + 1);
+                if (i > 0)
+                {
+                    cell = new StringBuilder('A' + (i + 3).ToString());
+                }
+                else
+                {
+                    cell = new StringBuilder("A3");
+                }
             }
         }
         private void suspensionsSetUp(XLWorkbook workbook, List<IXLWorksheet> workSheets)
@@ -125,8 +138,14 @@ namespace SDSU_Rock_Wall_CRM
                     workSheets[1].Cell(cell.ToString()).Value = suspensions.Tables[0].Rows[i][j];
                     cell[0] = (char)((int)(cell[0]) + 1);
                 }
-                cell[0] = 'A';
-                cell[1] = (char)((int)(cell[1]) + 1);
+                if (i > 0)
+                {
+                    cell = new StringBuilder('A' + (i + 3).ToString());
+                }
+                else
+                {
+                    cell = new StringBuilder("A3");
+                }
             }
         }
         private void userInformationSetUp(XLWorkbook workbook, List<IXLWorksheet> workSheets)
@@ -139,11 +158,24 @@ namespace SDSU_Rock_Wall_CRM
             {
                 for (int j = 0; j < users.Tables[0].Columns.Count; j++)
                 {
-                    workSheets[0].Cell(cell.ToString()).Value = users.Tables[0].Rows[i][j];
-                    cell[0] = (char)((int)(cell[0]) + 1);
+                    try
+                    {
+                        workSheets[0].Cell(cell.ToString()).Value = users.Tables[0].Rows[i][j];
+                        cell[0] = (char)((int)(cell[0]) + 1);
+                    }
+                    catch(NullReferenceException ex)
+                    {
+                        cell[0] = (char)((int)(cell[0]) + 1);
+                    }
                 }
-                cell[0] = 'A';
-                cell[1] = (char)((int)(cell[1]) + 1);
+                if (i > 0)
+                {
+                    cell = new StringBuilder('A' + (i + 3).ToString());
+                }
+                else
+                {
+                    cell = new StringBuilder("A3");
+                }
             }
         }
         private void certifiedUserSetUp(XLWorkbook workbook, List<IXLWorksheet> workSheets)
@@ -159,8 +191,14 @@ namespace SDSU_Rock_Wall_CRM
                     workSheets[3].Cell(cell.ToString()).Value = suspensions.Tables[0].Rows[i][j];
                     cell[0] = (char)((int)(cell[0]) + 1);
                 }
-                cell[0] = 'A';
-                cell[1] = (char)((int)(cell[1]) + 1);
+                if (i > 0)
+                {
+                    cell = new StringBuilder('A' + (i + 3).ToString());
+                }
+                else
+                {
+                    cell = new StringBuilder("A3");
+                }
             }
         }
         public void generateInventoryReport()
@@ -188,8 +226,14 @@ namespace SDSU_Rock_Wall_CRM
                     workSheets[0].Cell(cell.ToString()).Value = inventory.Tables[0].Rows[i][j];
                     cell[0] = (char)((int)(cell[0]) + 1);
                 }
-                cell[0] = 'A';
-                cell[1] = (char)((int)(cell[1]) + 1);
+                if (i > 0)
+                {
+                    cell = new StringBuilder('A' + (i + 3).ToString());
+                }
+                else
+                {
+                    cell = new StringBuilder("A3");
+                }
             }
             String fileName = String.Format("Inventory Report {0} {1}", DateTime.Now.ToShortDateString(), DateTime.Now.ToShortTimeString());
             Regex rgx = new Regex("[^a-zA-Z0-9 -]");
@@ -247,22 +291,49 @@ namespace SDSU_Rock_Wall_CRM
             {
                 for (int j = 0; j < suspensions.Tables[0].Columns.Count; j++)
                 {
-                    workSheets[0].Cell(cell.ToString()).Value = suspensions.Tables[0].Rows[i][j];
-                    cell[0] = (char)((int)(cell[0]) + 1);
+                    try
+                    {
+                        workSheets[0].Cell(cell.ToString()).Value = suspensions.Tables[0].Rows[i][j];
+                        cell[0] = (char)((int)(cell[0]) + 1);
+                    }
+                    catch(NullReferenceException ex)
+                    {
+                        
+                        cell[0] = (char)((int)(cell[0]) + 1);
+                    }
                 }
-                cell[0] = 'A';
-                cell[1] = (char)((int)(cell[1]) + 1);
+                if (i > 0)
+                {
+                    cell = new StringBuilder('A' + (i + 3).ToString());
+                }
+                else
+                {
+                    cell = new StringBuilder("A3");
+                }
             }
             cell = new StringBuilder("A2");
             for (int i = 0; i < unhandledSuspensions.Tables[0].Rows.Count; i++)
             {
                 for (int j = 0; j < unhandledSuspensions.Tables[0].Columns.Count; j++)
                 {
-                    workSheets[1].Cell(cell.ToString()).Value = unhandledSuspensions.Tables[0].Rows[i][j];
-                    cell[0] = (char)((int)(cell[0]) + 1);
+                    try
+                    {
+                        workSheets[1].Cell(cell.ToString()).Value = unhandledSuspensions.Tables[0].Rows[i][j];
+                        cell[0] = (char)((int)(cell[0]) + 1);
+                    }
+                    catch (NullReferenceException)
+                    {
+                        cell[0] = (char)((int)(cell[0]) + 1);
+                    }
                 }
-                cell[0] = 'A';
-                cell[1] = (char)((int)(cell[1]) + 1);
+                if (i > 0)
+                {
+                    cell = new StringBuilder('A' + (i + 3).ToString());
+                }
+                else
+                {
+                    cell = new StringBuilder("A3");
+                }
             }
             String fileName = String.Format("Suspensions Report {0} {1}", DateTime.Now.ToShortDateString(), DateTime.Now.ToShortTimeString());
             Regex rgx = new Regex("[^a-zA-Z0-9 -]");
@@ -340,8 +411,14 @@ namespace SDSU_Rock_Wall_CRM
                     workSheets[0].Cell(cell.ToString()).Value = allUsers.Tables[0].Rows[i][j];
                     cell[0] = (char)((int)(cell[0]) + 1);
                 }
-                cell[0] = 'A';
-                cell[1] = (char)((int)(cell[1]) + 1);
+                if (i > 0)
+                {
+                    cell = new StringBuilder('A' + (i + 3).ToString());
+                }
+                else
+                {
+                    cell = new StringBuilder("A3");
+                }
             }
             cell = new StringBuilder("A2");
             for (int i = 0; i < blayUsers.Tables[0].Rows.Count; i++)
@@ -351,8 +428,14 @@ namespace SDSU_Rock_Wall_CRM
                     workSheets[1].Cell(cell.ToString()).Value = blayUsers.Tables[0].Rows[i][j];
                     cell[0] = (char)((int)(cell[0]) + 1);
                 }
-                cell[0] = 'A';
-                cell[1] = (char)((int)(cell[1]) + 1);
+                if (i > 0)
+                {
+                    cell = new StringBuilder('A' + (i + 3).ToString());
+                }
+                else
+                {
+                    cell = new StringBuilder("A3");
+                }
             }
             cell = new StringBuilder("A2");
             for (int i = 0; i < leadUsers.Tables[0].Rows.Count; i++)
@@ -362,8 +445,14 @@ namespace SDSU_Rock_Wall_CRM
                     workSheets[2].Cell(cell.ToString()).Value = leadUsers.Tables[0].Rows[i][j];
                     cell[0] = (char)((int)(cell[0]) + 1);
                 }
-                cell[0] = 'A';
-                cell[1] = (char)((int)(cell[1]) + 1);
+                if (i > 0)
+                {
+                    cell = new StringBuilder('A' + (i + 3).ToString());
+                }
+                else
+                {
+                    cell = new StringBuilder("A3");
+                }
             }
             String fileName = String.Format("Certified Users Report {0} {1}", DateTime.Now.ToShortDateString(), DateTime.Now.ToShortTimeString());
             Regex rgx = new Regex("[^a-zA-Z0-9 -]");
