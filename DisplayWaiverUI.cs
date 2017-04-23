@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing.Drawing2D;
 
 namespace SDSU_Rock_Wall_CRM
 {
@@ -17,7 +18,14 @@ namespace SDSU_Rock_Wall_CRM
         {
             InitializeComponent();
             this.Text = ($"Waiver Signature of {firstName} {lastName}");
-            pictureBox1.Image = Image.FromStream(ms);
+            Bitmap waiver = new Bitmap(Properties.Resources.waiver);
+            Bitmap signature = new Bitmap(ms);
+            Bitmap finalImage = new Bitmap(waiver.Width, waiver.Height);
+            Graphics graphics = Graphics.FromImage(finalImage);
+            graphics.CompositingMode = CompositingMode.SourceCopy;
+            graphics.DrawImage(waiver, 0, 0);
+            graphics.DrawImage(signature, 170, 1200);
+            pictureBox1.Image = finalImage;
         }
     }
 }
