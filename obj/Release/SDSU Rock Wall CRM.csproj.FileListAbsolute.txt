@@ -18,3 +18,4 @@ F:\Code\Software Engineering\Rock Wall\obj\Release\SDSU_Rock_Wall_CRM.ReportUI.r
 F:\Code\Software Engineering\Rock Wall\obj\Release\SDSU_Rock_Wall_CRM.ManageUserUI.resources
 F:\Code\Software Engineering\Rock Wall\obj\Release\SDSU_Rock_Wall_CRM.DisplayWaiverUI.resources
 F:\Code\Software Engineering\Rock Wall\obj\Release\SDSU_Rock_Wall_CRM.SuspendUserUI.resources
+F:\Code\Software Engineering\Rock Wall\bin\Release\System.ValueTuple.dll

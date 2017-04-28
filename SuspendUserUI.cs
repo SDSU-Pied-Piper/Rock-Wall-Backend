@@ -42,10 +42,15 @@ namespace SDSU_Rock_Wall_CRM
             if (Convert.ToBoolean(userDataGridView.Rows[currentSelectedIndex].Cells[9].Value) == true)
             {
                 command.Parameters.AddWithValue("@isSuspended", 1);
+                command.Parameters.AddWithValue("@dateSuspended", userDataGridView.Rows[currentSelectedIndex].Cells[11].Value.ToString());
+                command.Parameters.AddWithValue("@dateUnsuspended", userDataGridView.Rows[currentSelectedIndex].Cells[12].Value.ToString());
             }
             else
             {
                 command.Parameters.AddWithValue("@isSuspended", 0);
+                command.Parameters.AddWithValue("@dateSuspended", DBNull.Value);
+                command.Parameters.AddWithValue("@dateUnsuspended", DBNull.Value);
+
             }
             if (userDataGridView.Rows[currentSelectedIndex].Cells[10].Value.ToString() == "")
             {
@@ -58,8 +63,7 @@ namespace SDSU_Rock_Wall_CRM
             command.Parameters.AddWithValue("@firstName", userDataGridView.Rows[currentSelectedIndex].Cells[1].Value.ToString());
             command.Parameters.AddWithValue("@lastName", userDataGridView.Rows[currentSelectedIndex].Cells[2].Value.ToString());
             command.Parameters.AddWithValue("@dateOfBirth", DateTime.Parse(userDataGridView.Rows[currentSelectedIndex].Cells[4].Value.ToString()).ToShortDateString());
-            command.Parameters.AddWithValue("@dateSuspended", userDataGridView.Rows[currentSelectedIndex].Cells[11].Value.ToString());
-            command.Parameters.AddWithValue("@dateUnsuspended", userDataGridView.Rows[currentSelectedIndex].Cells[12].Value.ToString());
+
             db.sendUpdateCommand(command);
         }
 
@@ -115,7 +119,7 @@ namespace SDSU_Rock_Wall_CRM
         private void searchUserButton_Click(object sender, EventArgs e)
         {
             Database db = new Database();
-            SqlCommand command = new SqlCommand("Select id,firstName,lastName,studentID,dateOfBirth,gender,email,isBlayCertified,isLeadCertified,isSuspended,suspensionReason,dateSuspended,dateUnsuspended From Patrons Where isWaiverSigned=1 And firstName=@firstName And lastName=@lastName And dateOfBirth=@dateOfBirth And isSuspended=1 Or (isSuspended = 0 And suspensionReason Is Not Null) Order By isSuspended", db.con);
+            SqlCommand command = new SqlCommand("Select id,firstName,lastName,studentID,dateOfBirth,gender,email,isBlayCertified,isLeadCertified,isSuspended,suspensionReason,dateSuspended,dateUnsuspended From Patrons Where isWaiverSigned=1 And firstName=@firstName And lastName=@lastName And dateOfBirth=@dateOfBirth And (isSuspended=1 Or (isSuspended = 0 And suspensionReason Is Not Null)) Order By isSuspended", db.con);
             command.Parameters.AddWithValue("@firstName", firstNameSearch.Text.ToString());
             command.Parameters.AddWithValue("@lastName", lastNameSearch.Text.ToString());
             try

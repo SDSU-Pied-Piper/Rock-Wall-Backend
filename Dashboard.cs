@@ -18,7 +18,7 @@ namespace SDSU_Rock_Wall_CRM
             try
             {
                 Database db = new Database();
-                SqlCommand command = new SqlCommand("Select * from Patrons where lastCheckIn=@dateOfToday", db.con);
+                SqlCommand command = new SqlCommand("Select * from Patrons Where lastCheckIn=@dateOfToday", db.con);
                 command.Parameters.AddWithValue("@dateOfToday", dateOfToday);
                 DataSet returnedData = new DataSet();
                 returnedData = db.sendSelectCommand(command);

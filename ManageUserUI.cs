@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -162,8 +163,11 @@ namespace SDSU_Rock_Wall_CRM
         private void buttonSeeWaiver_Click(object sender, EventArgs e)
         {
             Database db = new Database();
-            int currentSelectedIndex = userDataGridView.CurrentRow.Index;
-            var displayWaiverBox = new DisplayWaiverUI(db.getImage(userDataGridView.Rows[currentSelectedIndex].Cells[1].Value.ToString(), userDataGridView.Rows[currentSelectedIndex].Cells[2].Value.ToString(), userDataGridView.Rows[currentSelectedIndex].Cells[4].Value.ToString()),userDataGridView.Rows[currentSelectedIndex].Cells[1].Value.ToString(), userDataGridView.Rows[currentSelectedIndex].Cells[2].Value.ToString());
+            int currentSelectedIndex = this.userDataGridView.CurrentRow.Index;
+            MemoryStream image;
+            string dateOfCreations = "";
+            (image,dateOfCreations) = db.getImage(this.userDataGridView.Rows[currentSelectedIndex].Cells[1].Value.ToString(), this.userDataGridView.Rows[currentSelectedIndex].Cells[2].Value.ToString(), this.userDataGridView.Rows[currentSelectedIndex].Cells[4].Value.ToString());
+            var displayWaiverBox = new DisplayWaiverUI(image, this.userDataGridView.Rows[currentSelectedIndex].Cells[1].Value.ToString(), this.userDataGridView.Rows[currentSelectedIndex].Cells[2].Value.ToString(),dateOfCreations);
             displayWaiverBox.Show();
         }
     }
