@@ -121,5 +121,14 @@ namespace SDSU_Rock_Wall_CRM
             }
             return false;
         }
+
+        private void dataGridView1_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            if (e != null)
+            {
+                DataGridView copy = (DataGridView)sender;
+                MessageBox.Show($"There is an error with your current cell. \n\"ID\" must be a number \"Purchase Date\" and \"Replacement Date\" must be valid dates!");
+            }
+        }
     }
 }

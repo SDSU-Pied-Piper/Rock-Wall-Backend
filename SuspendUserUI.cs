@@ -169,5 +169,14 @@ namespace SDSU_Rock_Wall_CRM
                 this.userDataGridView = new DataGridView();
             }
         }
+
+        private void userDataGridView_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            if(e != null)
+            {
+                DataGridView copy = (DataGridView)sender;
+                MessageBox.Show($"There is an error with the dates you put in for a suspension for user ID {copy.SelectedRows[0].Cells[0].Value.ToString()}!");
+            }
+        }
     }
 }

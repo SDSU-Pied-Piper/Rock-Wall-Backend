@@ -21,6 +21,8 @@ namespace SDSU_Rock_Wall_CRM
             this.reportListing.Items.Add("Inventory Report");
             this.reportListing.Items.Add("Suspension Report");
             this.reportListing.Items.Add("Certified Users Report");
+            this.reportListing.Items.Add("Weekly Report");
+            this.reportListing.Items.Add("30 Day Report");
         }
 
         private void moveRightButton_Click(object sender, EventArgs e)
@@ -61,6 +63,14 @@ namespace SDSU_Rock_Wall_CRM
                 else if(item.ToString() == "Certified Users Report")
                 {
                     r.generateCertifiedUsersReport();
+                }
+                else if(item.ToString() == "Weekly Report")
+                {
+                    r.generateUserReportWeeky();
+                }
+                else if(item.ToString() == "30 Day Report")
+                {
+                    r.generateUserReportMonthly();
                 }
             }
         }

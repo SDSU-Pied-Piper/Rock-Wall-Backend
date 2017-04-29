@@ -53,6 +53,7 @@
             this.userDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.userDataGridView.Size = new System.Drawing.Size(1213, 494);
             this.userDataGridView.TabIndex = 17;
+            this.userDataGridView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.userDataGridView_DataError);
             // 
             // buttonUpdatePatron
             // 
