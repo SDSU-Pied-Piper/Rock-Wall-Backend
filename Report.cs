@@ -858,7 +858,7 @@ namespace SDSU_Rock_Wall_CRM
                 }
                 cell = new StringBuilder("A2");
             }
-            String fileName = String.Format("Weekly Report {0} to {1} as of {2}", DateTime.Now.AddDays(-7).ToShortDateString(), DateTime.Now.ToShortDateString(), DateTime.Now.ToShortTimeString());
+            String fileName = String.Format("Monthly Report {0} to {1} as of {2}", DateTime.Now.AddDays(-7).ToShortDateString(), DateTime.Now.ToShortDateString(), DateTime.Now.ToShortTimeString());
             Regex rgx = new Regex("[^a-zA-Z0-9 -]");
             fileName = rgx.Replace(fileName, "");
             workBook.SaveAs(String.Format("{0}.xlsx", fileName));
